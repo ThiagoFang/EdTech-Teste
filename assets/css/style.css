@@ -11,6 +11,7 @@
   list-style: none;
   text-decoration: none;
   font-family: 'Raleway', sans-serif;
+  box-sizing: border-box;
 }
 
 .container {
@@ -28,6 +29,7 @@
   font-size: 2.8rem;
   text-align: center;
   margin-bottom: 2rem;
+  font-weight: 700;
   color: var(--title-color);
 }
 .section__title.variant {
@@ -112,6 +114,93 @@
   left: -10rem;
   z-index: 0;
 }
+
+/*    DROPDOWN AREA    */
+.dropdown__area {
+  background-color: var(--title-subcolor);
+}
+
+.dropdown__text {
+  color: #FFF;
+  margin-bottom: 2rem;
+}
+
+.dropdown__box-area {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: flex-start;
+  justify-content: center;
+  column-gap: 1rem;
+  width: 100%;
+}
+
+.dropdown__box-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFF;
+  border-radius: 1rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+}
+
+.dropdown__box-item .image__area {
+  display: flex;
+  height: 200px;
+  justify-content: center;
+  padding: 1rem;
+  position: relative;
+}
+.dropdown__box-item .image__area img {
+}
+
+.dropdown__box-item .content {
+  background-color: var(--purple);
+  width: 100%;
+  height: 0;
+  border-radius: 0 0 1rem 1rem;
+  padding: 1rem;
+  overflow: hidden;
+  transition: .3s ease-in-out;
+}
+
+.dropdown__box-item.show .content {
+  background-color: var(--title-color);
+  padding: 4rem 1rem 1rem 1rem;
+  height: 18rem;
+}
+
+.content .content__text {
+  color: var(--purple);
+  text-align: center;
+  transition: transform .3s ease-in-out;
+  transform: translateY(100%);
+}
+
+.dropdown__box-item.show .content__text {
+  transform: translateY(0);
+}
+
+.toggle__button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem .75rem;
+  border-radius: 50%;
+  background-color: #FFF;
+  bottom: -3.5rem;
+  cursor: pointer;
+  transition: background .2s;
+}
+.toggle__button img {
+  width: 1.5rem;
+}
+
+.dropdown__box-item.show .toggle__button {
+  background-color: var(--purple);
+}
+
 
 /*    FOOTER    */
 .page__footer {
