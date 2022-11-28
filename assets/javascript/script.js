@@ -1,4 +1,4 @@
-/*    DROPDOWN AREA */
+/*    DROPDOWN AREA    */
 const dropDownButtonList = document.querySelectorAll('.toggle__button.dropdown');
 
 const toggleDropDownStatus = (key) => {
