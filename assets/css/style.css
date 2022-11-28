@@ -1,6 +1,7 @@
 
 :root {
   --purple: #7A2B58;
+  --gray: #353535;
   --title-color: #FFCC33;
   --title-subcolor: #03B5B0;
 }
@@ -151,8 +152,6 @@
   padding: 1rem;
   position: relative;
 }
-.dropdown__box-item .image__area img {
-}
 
 .dropdown__box-item .content {
   background-color: var(--purple);
@@ -201,6 +200,41 @@
   background-color: var(--purple);
 }
 
+.section__detail.dropdown {
+  position: absolute;
+  width: 20.9rem;
+  height: auto;
+  bottom: -2rem;
+  right: -10rem;
+  z-index: 0;
+}
+
+/*    OFICCE AREA    */
+.office__area {
+  background-color: var(--gray);
+}
+
+.office__area .container.office{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.office__area .image__area {
+  width: 28.5rem;
+  height: 22.5rem;
+  background-image: url('../images/img-01.png');
+  background-size: cover;
+  background-position: center;
+  order: 2;
+}
+
+.office__area .content {
+  flex: 1;
+  order: 1;
+  color: #FFF;
+  font-size: 1.15rem;
+}
 
 /*    FOOTER    */
 .page__footer {

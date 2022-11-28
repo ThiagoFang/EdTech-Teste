@@ -13,7 +13,6 @@ const toggleDropDownStatus = (key) => {
   buttonImg.src = "./assets//icons/icon-arrow-down.svg";
 };
 
-dropDownButtonList.forEach((item) => {
-  const dataKey = item.dataset.key;
-  item.addEventListener('click', () => toggleDropDownStatus(dataKey));
+dropDownButtonList.forEach((item, index) => {
+  item.addEventListener('click', () => toggleDropDownStatus(index));
 });
