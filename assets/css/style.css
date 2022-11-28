@@ -3,6 +3,8 @@
   --gray: #353535;
   --title-color: #FFCC33;
   --title-subcolor: #03B5B0;
+  --text-gray: #707070;
+  --red: #FF3737;
 }
 
 *{
@@ -28,7 +30,7 @@
 .section__title {
   font-size: 2.8rem;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 6rem;
   font-weight: 700;
   color: var(--title-color);
 }
@@ -179,7 +181,7 @@
   transform: translateY(0);
 }
 
-.toggle__button {
+.dropdown__box-item .toggle__button {
   position: absolute;
   display: flex;
   align-items: center;
@@ -189,10 +191,14 @@
   background-color: #FFF;
   bottom: -3.5rem;
   cursor: pointer;
-  transition: background .2s;
+  transition: .2s;
 }
-.toggle__button img {
+.dropdown__box-item .toggle__button img {
   width: 1.5rem;
+}
+
+.dropdown__box-item .toggle__button:hover {
+  transform: translateY(5px);
 }
 
 .dropdown__box-item.show .toggle__button {
@@ -220,6 +226,7 @@
 }
 
 .office__area .image__area {
+  position: relative;
   width: 28.5rem;
   height: 22.5rem;
   background-image: url('../images/img-01.png');
@@ -233,6 +240,117 @@
   order: 1;
   color: #FFF;
   font-size: 1.15rem;
+}
+
+.image__area-detail {
+  position: absolute;
+}
+
+.image__area-detail.top {
+  top: -2rem;
+  left: -2rem;
+}
+
+.image__area-detail.bottom {
+  bottom: -2rem;
+  right: -2rem;
+}
+
+/* CIRCLE AREA */
+
+.container.circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 2rem;
+}
+
+.interative__circle-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 38rem;
+  height: 38rem;
+}
+.interative__circle-area img {
+  height: 100%;
+}
+
+.interative__circle-area .text__circle {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 19rem;
+  height: 19rem;
+  border-radius: 50%;
+  background-color: var(--title-color);
+  border: 1px solid #000;
+  transition: background .1s ease-in-out;
+}
+.interative__circle-area .text__circle.yellow{
+  background-color: var(--title-color);
+  color: #000;
+}
+.interative__circle-area .text__circle.red{
+  background-color: var(--red);
+  color: #FFF;
+}
+.interative__circle-area .text__circle.gray{
+  background-color: var(--text-gray);
+  color: #FFF;
+}
+
+.text__circle .main__text {
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.text__circle .main__text span {
+  font-weight: 700;
+}
+
+.text__circle .main__text.show {
+  display: flex;
+}
+
+.interative__circle-area .circle__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: var(--title-subcolor);
+  transition: background .1s ease-in-out, transform .1s ease-in-out;
+}
+.interative__circle-area .circle__button:hover {
+  transform: translateY(2px);
+}
+.interative__circle-area .circle__button.show {
+  background-color: var(--purple);
+}
+.interative__circle-area .circle__button img {
+  width: 1.25rem;
+  height: auto;
+}
+.interative__circle-area .circle__button.yellow{
+  top: 6.7rem;
+}
+.interative__circle-area .circle__button.red {
+  left: 4.65rem;
+  bottom: 5.85rem;
+}
+.interative__circle-area .circle__button.gray {
+  bottom: 5.95rem;
+  right: 4.65rem;
 }
 
 /*    FOOTER    */
