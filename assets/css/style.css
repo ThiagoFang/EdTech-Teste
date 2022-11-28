@@ -38,6 +38,10 @@
   color: var(--title-subcolor);
 }
 
+.section__detail {
+  position: absolute;
+  bottom: -2rem;
+}
 
 /*    MAIN BANNER    */
 .main__banner {
@@ -109,12 +113,7 @@
 }
 
 .section__detail.business {
-  position: absolute;
-  width: 20.9rem;
-  height: auto;
-  bottom: -2rem;
   left: -10rem;
-  z-index: 0;
 }
 
 /*    DROPDOWN AREA    */
@@ -206,12 +205,7 @@
 }
 
 .section__detail.dropdown {
-  position: absolute;
-  width: 20.9rem;
-  height: auto;
-  bottom: -2rem;
   right: -10rem;
-  z-index: 0;
 }
 
 /*    OFICCE AREA    */
@@ -366,3 +360,25 @@
   width: 240px;
   height: auto;
 }
+
+/*    MEDIA QUERIES    */
+
+@media screen and (max-width: 1024px) {
+  .section{
+    padding: 4rem 0;
+  }
+
+  .section__detail {
+    width: 15rem;
+  }
+  .section__detail.business {
+    left: -8rem;
+  }
+  .section__detail.dropdown {
+    right: -8rem;
+  }
+
+  .main__banner {
+    background-image: url('../images/header-1024.png');
+  };
+};
