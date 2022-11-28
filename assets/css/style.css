@@ -367,7 +367,6 @@
   .section{
     padding: 4rem 0;
   }
-
   .section__detail {
     width: 15rem;
   }
@@ -377,8 +376,39 @@
   .section__detail.dropdown {
     right: -8rem;
   }
-
   .main__banner {
     background-image: url('../images/header-1024.png');
-  };
-};
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 3rem 2rem 6rem 2rem;
+  }
+  .section__title {
+    margin-bottom: 3rem;
+  }
+  .section__detail {
+    width: 10rem;
+    bottom: -1rem;
+  }
+  .section__detail.business {
+    left: -6rem;
+  }
+  .section__detail.dropdown {
+    right: -6rem;
+  }
+  .dropdown__box-item.show .content {
+    height: 20rem;
+  }
+  .office__area .container.office {
+    flex-direction: column;
+    row-gap: 4rem;
+  }
+  .office__area .image__area {
+    order: 1;
+  }
+  .office__area .content {
+    order: 2;
+  }
+}
