@@ -91,6 +91,10 @@
   padding: 2rem;
 }
 
+.section__title.business.inside {
+  display: none;
+}
+
 .business__box-info {
   display: flex;
   flex-direction: column;
@@ -141,6 +145,7 @@
   align-items: center;
   justify-content: center;
   background-color: #FFF;
+  max-width: 18.8rem;
   border-radius: 1rem;
   box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
 }
@@ -410,5 +415,89 @@
   }
   .office__area .content {
     order: 2;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  
+  .section__title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .main__banner {
+    background-image: url('../images/header-360.png');
+  }
+  .main__banner-logo {
+    width: 8.6rem;
+  }
+  .main__banner-info .banner__title {
+    font-size: 3.5rem;
+  }
+  .main__banner-info .banner__subtitle {
+    font-size: 1.1rem;
+  }
+
+  .business__area.section {
+    padding: 6rem 2rem;
+    padding-top: 8rem;
+  }
+  .section__title.business {
+    display: none;
+  }
+  .section__title.business.inside {
+    display: flex;
+  }
+  .business__box {
+    padding: 4rem 2rem;
+    position: relative;
+    flex-direction: column;
+  }
+  .business__img {
+    width: 10rem;
+    position: absolute;
+    top: -5.5rem;
+  }
+  .business__list-item {
+    display: flex;
+    align-items: flex-start;
+  }
+  .business__list-item::before {
+    margin-top: 5px;
+  }
+
+  .section__title.dropdown {
+    display: none;
+  }
+  .dropdown__box-area {
+    grid-template-columns: 1fr;
+    row-gap: 3.1rem;
+  }
+
+  .interative__circle-area {
+    width: 20rem;
+    height: 21rem;
+  }
+  .interative__circle-area .text__circle  {
+    width: 11rem;
+    height: 11rem;
+  }
+  .interative__circle-area .circle__button {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+  .interative__circle-area .circle__button img {
+    width: 1rem;
+  } 
+  .interative__circle-area .circle__button.yellow {
+    top: 3.3rem;
+  }
+  .interative__circle-area .circle__button.red {
+    left: 1.8rem;
+    bottom: 3rem;
+  }
+  .interative__circle-area .circle__button.gray {
+    right: 1.65rem;
+    bottom: 3rem;
   }
 }
